@@ -32,54 +32,95 @@ h2 {
 }
 
 .above-header {
-	background: $frogblack;
+  background: $frogblack;
 }
 
 #page {
-	width: 1225px;
-	margin: 0 auto;
+  width: 1225px;
+  margin: 0 auto;
 }
 
 #main-nav {
-	a {
-		color: white;
-		text-decoration: none;
-		line-height: 40px;
-		font-size: 14px;
-		padding: 0 24px 0 24px;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+  a {
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 24px 0 24px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 header#top {
-	padding: 50px 24px;
-	background: $froggreen url('../images/bullfrog-header.png') no-repeat right center;
-	margin-bottom: 48px;
-
-	.logo {
-		font-size: 72px;
-		color: white;
-		text-decoration: none;
-	}
+  padding: 50px 24px;
+  background: $froggreen url('../images/bullfrog-header.png') no-repeat right center;
+  margin-bottom: 48px;
+  .logo {
+    font-size: 72px;
+    color: white;
+    text-decoration: none;
+  }
 }
 
 #content {
-	width: 578px;
-	float: left;
+  width: 578px;
+  float: left;
 }
 
 article {
-	line-height: 27px;
+  line-height: 27px;
+  font-size: 16px;
 
-	h1 {
-		font-size: 36px;
-		color: $froggreen;
-		margin: 24px 0;
-	}
-	p {
-		font-family: $frogsans;
-	}
+  h1 {
+    font-size: 36px;
+    color: $froggreen;
+    margin: 24px 0;
+  }
+  p {
+    font-family: $frogsans;
+  }
 }
 
+section.content-center
+section.content-right {
+  @extend %quarter-col;
+  a {
+    @include froglinks($froggreen);
+  }
+}
+
+section.content-center {
+  ul {
+    font-family: $frogsans;
+    float: left;
+    li {
+      a{
+        @include froglinks($froggreen);
+
+      }
+    }
+  }
+}
+
+section.content-right {
+  article {
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  h3 {
+    @extend h2;
+    margin-bottom: 12px;
+  }
+}
+  
+
+footer {
+  clear: both;
+  background: $frogblack;
+  padding: 20px;
+  color: white;
+}

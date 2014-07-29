@@ -76,7 +76,7 @@ h2, section.content-right h3 {
 }
 
 #page {
-  width: 1225px;
+  max-width: 1225px;
   margin: 0 auto;
 }
 

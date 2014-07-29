@@ -36,8 +36,8 @@ h2 {
 }
 
 #page {
-  width: 1225px;
-  margin: 0 auto;
+  max-width: 1225px; //max-width allows the width to change in response to the window changing 
+  margin: 0 auto; //this auto centers the page
 }
 
 #main-nav {
@@ -47,7 +47,7 @@ h2 {
     line-height: 40px;
     font-size: 14px;
     padding: 0 24px 0 24px;
-    &:hover {
+    &:hover { //the & reuses the same selector in a psuedo state
       text-decoration: underline;
     }
   }
@@ -82,7 +82,7 @@ article {
   }
 }
 
-section.content-center,
+section.content-center, //separating selectors by a comma allows you to target multiple selectors with the same code
 section.content-right {
   @extend %quarter-col;
   a {

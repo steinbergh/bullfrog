@@ -3,9 +3,83 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "compass/reset"; //strips out all the default styles
 @import "variables";
 
-body {
-  // background: red;
+// Mixins
+@mixin froglinks($color) {
+  display: block;
+  color: $color;
+  text-decoration: none;
+  margin-bottom: 24px;
+  &:hover {
+    text-decoration: underline;
+  }
 }
+
+// Placeholder selectors
+%quarter-col {
+  margin: 0 24px;
+  width: 267px;
+  float: left;
+}
+//main styles
+
+h2 {
+  font-size: 20px;
+  color: $froggreen;
+  margin: 24px 0;
+}
+
+.above-header {
+	background: $frogblack;
+}
+
+#page {
+	width: 1225px;
+	margin: 0 auto;
+}
+
+#main-nav {
+	a {
+		color: white;
+		text-decoration: none;
+		line-height: 40px;
+		font-size: 14px;
+		padding: 0 24px 0 24px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+header#top {
+	padding: 50px 24px;
+	background: $froggreen url('../images/bullfrog-header.png') no-repeat right center;
+	margin-bottom: 48px;
+
+	.logo {
+		font-size: 72px;
+		color: white;
+		text-decoration: none;
+	}
+}
+
+#content {
+	width: 578px;
+	float: left;
+}
+
+article {
+	line-height: 27px;
+
+	h1 {
+		font-size: 36px;
+		color: $froggreen;
+		margin: 24px 0;
+	}
+	p {
+		font-family: $frogsans;
+	}
+}
+

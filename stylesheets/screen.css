@@ -96,7 +96,7 @@ header#top {
   background: #668134 url("../images/bullfrog-header.png") no-repeat right center;
   margin-bottom: 48px;
 }
-header#top .logo {
+header#top .logo a {
   font-size: 72px;
   color: white;
   text-decoration: none;

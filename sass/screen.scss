@@ -17,7 +17,7 @@
 
 // Placeholder selectors
 %quarter-col {
-  @include col(1/4); //this is a jeet grid system mixin
+  @include col(2/4); //this is a jeet grid system mixin
   @include box-sizing (border-box);
     @include breakpoint ($breakpoint-medium-width) {
     @include col(2/4);
@@ -45,6 +45,7 @@ h2 {
   // width: 1225px;
   // margin: 0 auto;
 }
+
 
 #main-nav {
   a {
@@ -104,15 +105,39 @@ article {
   }
 }
 
-section.content-center,
-section.content-right {
+#tab-nav {
+    color: $froggreen;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 24px 0 24px;
+    @include breakpoint($breakpoint-small-width) {
+      padding: 0 12px 12px;
+    }
+}
+
+.tab-content{
   @extend %quarter-col;
+  @include box-sizing(border-box);
   a {
     @include froglinks($froggreen);
   }
+  @include breakpoint($breakpoint-medium-width){
+    @include col(1);
+    padding: 24px;
+  }
 }
 
-section.content-center {
+.tab-button {
+  @include box-sizing(border-box);
+  margin: 0 14px 0 0;
+  display: inline-block;
+  padding: 0 24px;
+}
+
+
+
+#tab1 {
   ul {
     font-family: $frogsans;
     li {
@@ -124,7 +149,7 @@ section.content-center {
 }
 
 
-section.content-right {
+#tab2 {
   padding-right: 18px;
   article {
     p {
@@ -144,3 +169,16 @@ footer {
   padding: 20px;
   color: white;
 }
+
+//jquery classes
+
+
+.button-active {
+  background-color: $froggreen;
+  color: white;
+}
+
+
+
+
+
